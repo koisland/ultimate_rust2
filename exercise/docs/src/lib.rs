@@ -4,6 +4,9 @@
 //
 // Once you've got the documentation here, run `cargo doc --no-deps --open` and take a look!
 
+//! A pumpkin is a cultivar of winter squash that is round with smooth, slightly ribbed skin, and is most often deep yellow to orange in coloration. The thick shell contains the seeds and pulp. The name is most commonly used for cultivars of Cucurbita pepo, but some cultivars of Cucurbita maxima, C. argyrosperma, and C. moschata with similar appearance are also sometimes called "pumpkins"
+//! ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg)
+
 // 2. What about an image!? Add an image of a pumpkin to the end of the module-level documentation.
 // The markdown format is ![some alt text](https://url-to-the-image.png)
 // Here's the image to link to: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg
@@ -15,8 +18,14 @@
 // - Document the "roundness" field, explaining that it is a percentage
 // - Document the "orangeness" field, explaining that it is a number from 8 to 27
 
+/// A big orange thing.
+/// 
+/// # Recipes
+/// *Coming soon!*
 pub struct Pumpkin {
+    /// The roundess describes the shape (percentage) of a pumpkin.
     pub roundness: f32,
+    /// The orangeness describes the brightness (number from 8 - 27) of the pumpkin.
     pub orangeness: i32,
 }
 
@@ -24,12 +33,15 @@ pub struct Pumpkin {
 // can't be used for pie. :'-(
 
 impl Pumpkin {
+    /// This method destroys the pumpkin and prevents its use for pie.
     pub fn smash(self) {}
 }
 
 // 5. Document that BURNT_ORANGE is for the "orangeness" field in the Pumpkin struct.
 // - Link to the Pumpkin struct in your description
 
+
+/// The color BURNT_ORANGE maps to the organgess field of the [Pumpkin struct](Pumpkin)
 pub const BURNT_ORANGE: i32 = 13;
 
 // Challenge: Find the option to pass to `cargo doc` so that documentation for this private item
